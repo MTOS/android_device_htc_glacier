@@ -20,38 +20,27 @@
 # definition file).
 #
 
+TARGET_BOOTLOADER_BOARD_NAME := glacier
+
 # inherit from new common msm7x30
 -include device/htc/msm7x30-common/BoardConfigCommon.mk
 
 # inherit from the proprietary version
 -include vendor/htc/glacier/BoardConfigVendor.mk
 
-TARGET_BOOTLOADER_BOARD_NAME := glacier
-
-# Trackpad
-BOARD_USE_LEGACY_TRACKPAD := true
-
 # Camera
 BOARD_HAVE_HTC_FFC := true
 
-# Kernel
-BOARD_KERNEL_BASE := 0x04000000
-BOARD_KERNEL_PAGE_SIZE := 4096
-TARGET_KERNEL_CONFIG := evervolv_glacier_defconfig
-
-# GPS
-BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := glacier
-BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 1240
-
-TARGET_USERIMAGES_USE_EXT4 := true
+# FS
 BOARD_BOOTIMAGE_PARTITION_SIZE := 4194304
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 435941376
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 1232072704
-BOARD_FLASH_BLOCK_SIZE := 262144
 
-BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1p1
-BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk1
-BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p2
+# GPS
+BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 1240
 
-TARGET_RECOVERY_FSTAB = device/htc/msm7x30-common/rootdir/etc/fstab.qcom
-RECOVERY_FSTAB_VERSION := 2
+# Kernel
+BOARD_KERNEL_BASE := 0x04000000
+
+# Trackpad
+BOARD_USE_LEGACY_TRACKPAD := true
