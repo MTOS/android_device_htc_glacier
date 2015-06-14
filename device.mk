@@ -49,7 +49,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/idc/atmel-touchscreen.idc:system/usr/idc/atmel-touchscreen.idc \
     $(LOCAL_PATH)/idc/glacier-keypad.idc:system/usr/idc/glacier-keypad.idc \
-    $(LOCAL_PATH)/idc/curcial-oj.idc:system/usr/idc/curcial-oj.idc \
+    $(LOCAL_PATH)/idc/curcial-oj.idc:system/usr/idc/curcial-oj.idc
 
 # Firmware
 PRODUCT_COPY_FILES += \
@@ -65,7 +65,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    init.target.rc \
+    init.target.rc
 
 # common msm7x30 configs
 $(call inherit-product, device/htc/msm7x30-common/msm7x30.mk)
