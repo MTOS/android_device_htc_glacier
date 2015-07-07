@@ -18,7 +18,7 @@ $(call inherit-product, device/htc/glacier/glacier.mk)
 # Inherit common CM configuration
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
-PRODUCT_BOOTANIMATION := device/htc/msm7x30-common/media/bootanimation.zip
+PRODUCT_BOOTANIMATION := device/htc/msm7x30-common/rootdir/bootanimation.zip
 
 # Set build fingerprint / ID / Product Name ect.
 PRODUCT_DEVICE := glacier
