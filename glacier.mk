@@ -18,7 +18,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # device specific props
-$(call inherit-product-if-exists, vendor/htc/glacier/device-vendor.mk)
+$(call inherit-product, vendor/htc/glacier/device-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
